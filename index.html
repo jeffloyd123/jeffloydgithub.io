@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Sharjah</title>
+    <link rel="icon" type="image/x-icon" href="images/ushar-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background: #003d6b;
+            color: #fff;
+            padding: 0 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .navbar .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar .contact-btn {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .menu-toggle img {
+            height: 30px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh;
+            overflow: hidden;
+        }
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .btn-apply {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 20px;
+        }
+        .about .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .about img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .about-content {
+            max-width: 600px;
+        }
+        .about-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        /* Programs Section */
+        .programs {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+        }
+        .programs .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .programs h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .programs ul {
+            list-style: none;
+            padding: 0;
+        }
+        .programs ul li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Admissions Section */
+        .admissions {
+            padding: 40px 20px;
+        }
+        .admissions .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .admissions h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .admissions p {
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #003d6b;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .contact .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .contact-form button {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #e67e22;
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #003d6b;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-logo img {
+            height: 50px;
+        }
+        .footer-links, .footer-newsletter {
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-links h3, .footer-newsletter h3 {
+            margin-bottom: 10px;
+        }
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-newsletter form {
+            display: flex;
+        }
+        .footer-newsletter input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .footer-newsletter button {
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer-newsletter button:hover {
+            background-color: #e67e22;
+        }
+        .social-icons a {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .social-icons a:hover {
+            color: #f39c12;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .navbar ul li {
+                margin: 10px 0;
+            }
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .hero-content p {
+                font-size: 1em;
+            }
+            .about .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .programs ul li, .contact-info {
+                text-align: center;
+            }
+            .contact-form {
+                margin: 0;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="university of sharjah.png" alt="University of Sharjah Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="slider">
+              <img src="image 1.png" alt="campus image 1">
+            <h1>Welcome to the University of Sharjah</h1>
+            <p>Empowering Minds, Shaping Futures</p>
+            <a href="admissions.html" class="btn-apply">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <img src="images/about-us.jpg" alt="About Us">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>The University of Sharjah is a leading institution dedicated to academic excellence, research, and community service. Our mission is to provide a high-quality education that prepares students for successful careers and lifelong learning.</p>
+                <p>With a diverse range of programs and state-of-the-art facilities, we are committed to nurturing the next generation of leaders and innovators.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <h2>Our Programs</h2>
+            <ul>
+                <li><h3>Engineering</h3><p>Explore our cutting-edge engineering programs designed to equip you with the skills needed to excel in the industry.</p></li>
+                <li><h3>Business</h3><p>Our business programs offer a comprehensive education in management, finance, and entrepreneurship.</p></li>
+                <li><h3>Health Sciences</h3><p>Prepare for a career in the health sector with our specialized programs in medicine, pharmacy, and allied health sciences.</p></li>
+                <li><h3>Humanities</h3><p>Our humanities programs provide a deep understanding of cultures, languages, and social sciences.</p></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section class="admissions">
+        <div class="container">
+            <h2>Admissions</h2>
+            <p>Ready to join us? Learn about our admission requirements and apply online. We look forward to welcoming you to the University of Sharjah!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><i class="fa fa-map-marker"></i> University of Sharjah, Sharjah, UAE</p>
+                <p><i class="fa fa-phone"></i> +971 6 505 0000</p>
+                <p><i class="fa fa-envelope"></i> info@sharjah.ac.ae</p>
+            </div>
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="university of sharjah.png" alt="University of Sharjah Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form action="subscribe.php" method="post">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/usharjah" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/usharjah" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/school/university-of-sharjah" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/usharjah" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

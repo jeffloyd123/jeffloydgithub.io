@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - University of Sharjah</title>
+    <link rel="icon" type="image/x-icon" href="images/ushar-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background: #003d6b;
+            color: #fff;
+            padding: 0 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .navbar .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar .contact-btn {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .menu-toggle img {
+            height: 30px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 20px;
+        }
+        .about .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .about-content .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-content .about-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+        .about-content .about-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #003d6b;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-logo img {
+            height: 50px;
+        }
+        .footer-links, .footer-newsletter {
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-links h3, .footer-newsletter h3 {
+            margin-bottom: 10px;
+        }
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-newsletter form {
+            display: flex;
+        }
+        .footer-newsletter input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .footer-newsletter button {
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer-newsletter button:hover {
+            background-color: #e67e22;
+        }
+        .social-icons a {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .social-icons a:hover {
+            color: #f39c12;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .navbar ul li {
+                margin: 10px 0;
+            }
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="university of sharjah.png" alt="University of Sharjah Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">
+            </button>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The University of Sharjah is a comprehensive academic institution that offers a wide range of undergraduate and graduate programs. Established in 1997, our university is committed to providing high-quality education and fostering research, innovation, and community engagement.</p>
+                    <p>Our mission is to cultivate critical thinking, creativity, and leadership in our students while contributing to the advancement of knowledge and the betterment of society. We are proud of our diverse and inclusive community, which brings together students, faculty, and staff from various cultural and academic backgrounds.</p>
+                    <p>At the University of Sharjah, we strive to create an inspiring and supportive environment where students can thrive academically, socially, and personally. We are dedicated to preparing our graduates to become global citizens and leaders in their respective fields.</p>
+                </div>
+                <div class="about-image">
+                    <img src="university campus.png" alt="University of Sharjah Campus">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="university of sharjah.png" alt="University of Sharjah Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form action="subscribe.php" method="post">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/usharjah" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/usharjah" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/school/university-of-sharjah" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/usharjah" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
